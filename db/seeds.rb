@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+restaurants = Flat.all
+restaurants.map do |restaurant|
+  restaurant.img_url = 'https://picsum.photos/200'
+  restaurant.save
+end
